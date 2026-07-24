@@ -17,7 +17,7 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 # print(capAnd_filter())
 
-def catogorize_countries_by_pattern(pattern):
-    return list(filter(lambda country: pattern in country["name"], countries_data))
+# def catogorize_countries_by_pattern(pattern):
+#     return list(filter(lambda country: pattern in country["name"], countries_data))
 
-print(catogorize_countries_by_pattern('land'))
+# print(catogorize_countries_by_pattern('land'))
