@@ -17,7 +17,7 @@
 #     lambda country, city: [country.upper(), country[:3].upper(), city.upper()],
 #     (c[0][0] for c in countries),
 #     (c[0][1] for c in countries)
-# )))
+# ))) you can do list con bc its map unlike squares example
 
 # print([[country.upper(), country[:3].upper(), capital.upper()] for [(country, capital)] in countries])
 
@@ -27,9 +27,9 @@
 
 # print([first + ' ' + last for [(first, last)] in names])  # Output: ['Asabeneh Yetayeh', 'David Smith', 'Donald Trump', 'Bill Gates']
 
-slope = lambda x1, y1, x2, y2: (y2 - y1) / (x2 - x1) if (x2 - x1) != 0 else None
+# slope = lambda x1, y1, x2, y2: (y2 - y1) / (x2 - x1) if (x2 - x1) != 0 else None
 
-intercept = lambda x1, y1, slope: y1 - slope * x1
+# intercept = lambda x1, y1, slope: y1 - slope * x1
 
-print(slope(1, 2, 3, 4))  # Output: 1.0
-print(intercept(1, 2, slope(1, 2, 3, 4)))  # Output: 1.0
+# print(slope(1, 2, 3, 4))  # Output: 1.0
+# print(intercept(1, 2, slope(1, 2, 3, 4)))  # Output: 1.0
