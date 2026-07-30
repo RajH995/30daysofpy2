@@ -16,11 +16,11 @@
 # print(greet())
 # print(greet("John"))
 
-# def show_args(**kwargs):
-#     for key, value in kwargs.items():
-#         print(f"{key}: {value}")
+def show_args(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
 
-# print(show_args(name="John", age=30, country="USA"))
+print(show_args(name="John", age=30, country="USA"))
 
 # def is_prime(num):
 #     if num <= 1:
@@ -51,12 +51,12 @@
 # print(sameDataType([1, 2, 3, 4]))  # True
 # print(sameDataType([1, "2", 3, 4]))  #false
 
-def validVariable(name):
-    import keyword
-    if not name.isidentifier() or keyword.iskeyword(name):
-        return False
-    return True
+# def validVariable(name):
+#     import keyword
+#     if not name.isidentifier() or keyword.iskeyword(name):
+#         return False
+#     return True
 
-print(validVariable("my_var"))  # True
-print(validVariable("2var"))    # False
-print(validVariable("in"))      # False
+# print(validVariable("my_var"))  # True
+# print(validVariable("2var"))    # False
+# print(validVariable("in"))      # False
