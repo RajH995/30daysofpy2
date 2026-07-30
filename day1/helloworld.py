@@ -141,4 +141,40 @@
 
 # print(battleship([['O', 'O', 'X'], ['X', 'O', 'O'], ['O', 'X', 'O']], [(0, 2), (1, 0), (2, 1), (0, 0)]))  # Output: 3
 
-print(3+3)
+
+
+
+def longestPalindrome(s: str) -> str:
+    if (s.strip() == "") :
+        return "None"
+
+    start, maxlen = 0, 0
+
+    def expandFromMiddle(left, right):
+        while left >= 0 and right < len(s) and s[left] == s[right]:
+            left -= 1
+            right += 1
+        return right - left - 1
+
+    for i in range(len(s)):
+        len1 = (expandFromMiddle(i, i))
+        len2 = (expandFromMiddle(i, i+1))
+        currentlen = max(len1, len2)
+
+        if currentlen > maxlen:
+            maxlen = currentlen
+            start = i - (currentlen-1)//2
+
+    return s[start: maxlen + start]
+
+
+print(longestPalindrome("       "))
+
+
+                
+
+
+
+        
+
+            
