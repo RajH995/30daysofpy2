@@ -33,7 +33,19 @@
 
 # print(nordic_countries)
 
-def unpacking_person_info(name, country, city, age):
-    return f'{name} lives in {country}, {city}. He is {age} year old.'
-dct = {'name':'Asabeneh', 'country':'Finland', 'city':'Helsinki', 'age':250}
-print(unpacking_person_info(**dct)) # Asabeneh lives in Finland, Helsinki. He is 250 years old.
+# def unpacking_person_info(name, country, city, age):
+#     return f'{name} lives in {country}, {city}. He is {age} year old.'
+# dct = {'name':'Asabeneh', 'country':'Finland', 'city':'Helsinki', 'age':250}
+# print(unpacking_person_info(**dct)) # Asabeneh lives in Finland, Helsinki. He is 250 years old.
+
+my_nums = [1, 2, 3, 4, 5]
+
+my_letters = ["A", "B", "C", "D", "E"]
+
+print(dict(zip(my_nums, my_letters)))  # {1: 'A', 2: 'B', 3: 'C', 4: 'D', 5: 'E'}
+
+# user_dict = {'name': 'Alice', 'age': 30}
+# status = ['Verified', 'Active']
+
+# for (key, value), stat in zip(user_dict.items(), status):
+#     print(f"{key}: {value} -> Status: {stat}")

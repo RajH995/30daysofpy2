@@ -144,34 +144,56 @@
 
 
 
-def longestPalindrome(s: str) -> str:
-    if (s.strip() == "") :
-        return "None"
+# def longestPalindrome(s: str) -> str:
+#     if (s.strip() == "") :
+#         return ""
 
-    start, maxlen = 0, 0
+#     start, maxlen = 0, 0
 
-    def expandFromMiddle(left, right):
-        while left >= 0 and right < len(s) and s[left] == s[right]:
-            left -= 1
-            right += 1
-        return right - left - 1
+#     def expandFromMiddle(left, right):
+#         while left >= 0 and right < len(s) and s[left] == s[right]:
+#             left -= 1
+#             right += 1
+#         return right - left - 1
 
-    for i in range(len(s)):
-        len1 = (expandFromMiddle(i, i))
-        len2 = (expandFromMiddle(i, i+1))
-        currentlen = max(len1, len2)
+#     for i in range(len(s)):
+#         len1 = (expandFromMiddle(i, i))
+#         len2 = (expandFromMiddle(i, i+1))
+#         currentlen = max(len1, len2)
 
-        if currentlen > maxlen:
-            maxlen = currentlen
-            start = i - (currentlen-1)//2
+#         if currentlen > maxlen:
+#             maxlen = currentlen
+#             start = i - (currentlen-1)//2
 
-    return s[start: maxlen + start]
-
-
-print(longestPalindrome("       "))
+#     return s[start: maxlen + start]
 
 
-                
+# print(longestPalindrome("       "))
+
+nums = [1, 2, 3, 4, 5]
+target = 9
+
+my_dict = dict(zip(nums, list(map(lambda x: target - x, nums))))
+
+
+def my_func(i=0):
+    for key in my_dict:
+        i = list(my_dict.keys()).index(key)
+        for key2 in my_dict:
+            if list(my_dict.keys()).index(key2) != i:
+                my_dict[key] = my_dict[key] - key2
+                i += 1
+            else:
+                i += 1
+                pass
+
+
+my_func()
+
+
+print(my_dict)  
+
+
 
 
 
